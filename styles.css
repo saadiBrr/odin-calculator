@@ -4,6 +4,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: khaki;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .container {
@@ -15,9 +17,19 @@ body {
 }
 
 .output {
-    width: 100%;
+    width: 400px;
     height: 200px;
     background-color: #f7f5eb;
+    font-size: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 30px ;
+    overflow: hidden;
+    -webkit-user-select: text;
+    user-select: text;
 }
 
 .buttons-container {
@@ -28,15 +40,12 @@ body {
 
 }
 
-.number {
-    background-color: #555;
-}
-
 .button {
     font-size: 25px;
     width: 100px;
     height: 100px;
     border: none;
+    cursor: pointer;
 }
 
 .button.symbol {
@@ -45,6 +54,24 @@ body {
 
 .button.number {
     color: #f7f5eb;
+    background-color: #555;
+
+}
+
+.button.symbol:hover {
+    background-color: #e7d956;
+}
+
+.button.symbol:active {
+    background-color: #dccd4d;
+}
+
+.button.number:hover {
+    background-color: #494949;
+}
+
+.button.number:active {
+    background-color: #434343;
 }
 
 .ac {
